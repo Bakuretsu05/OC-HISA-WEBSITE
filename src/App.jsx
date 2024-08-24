@@ -1,8 +1,26 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Home from "./pages/home";
+import About from "./pages/about";
+import Events from "./pages/events";
+import Membership from "./pages/membership";
+import Partner from "./pages/partner";
+import NotFound from "./pages/notFound";
+import Navbar from "./components/Navbar";
+
 function App() {
   return (
-    <>
-      <h1 className="text-4xl font-bold text-red-400">app</h1>
-    </>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="events" element={<Events />} />
+        <Route path="membership" element={<Membership />} />
+        <Route path="partner" element={<Partner />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
