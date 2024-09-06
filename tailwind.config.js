@@ -17,6 +17,8 @@ export default {
       },
       animation: {
         wave1: "wave1 10s linear infinite",
+        wave2: "wave2 15s linear infinite",
+        wave3: "wave3 15s linear infinite",
       },
       keyframes: {
         wave1: {
@@ -28,6 +30,28 @@ export default {
           },
           "75%": {
             transform: "rotate(15deg)",
+          },
+        },
+        wave2: {
+          "0% 50% 100%": {
+            transform: "rotate(0deg)",
+          },
+          "25%": {
+            transform: "rotate(90deg)",
+          },
+          "75%": {
+            transform: "rotate(-90deg)",
+          },
+        },
+        wave3: {
+          "0% 50% 100%": {
+            transform: "rotate(-45deg)",
+          },
+          "25%": {
+            transform: "rotate(-75deg)",
+          },
+          "75%": {
+            transform: "rotate(-15deg)",
           },
         },
       },

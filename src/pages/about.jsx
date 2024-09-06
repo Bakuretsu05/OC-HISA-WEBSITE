@@ -1,15 +1,15 @@
 import logo from "../assets/images/logo_ochisa.png";
 import Card from "../components/Card";
-import TransparentRect from "../components/TransparentRect";
+import AboutBG from "../components/AboutPage/AboutBG";
 
 //* TODO: Add ganbu photos after photoshoot
 
 const About = () => {
   return (
-    <div className="bg-gradient-to-br from-grad-red to-grad-orange flex flex-col items-center py-8 relative -z-20">
+    <div className="bg-gradient-to-br from-grad-red to-grad-orange flex flex-col items-center py-8 relative -z-20 overflow-x-hidden">
       <div className="-top-0 absolute w-full h-full bg-transparent-layer backdrop-blur-sm -z-10"></div>
 
-      <TransparentRect className="absolute -top-6 -left-4 w-64 h-16 rotate-45 -z-20 origin-left animate-wave1" />
+      <AboutBG />
 
       <img src={logo} alt="ochisa_logo" className="w-96" />
 
