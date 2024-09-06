@@ -9,7 +9,7 @@ const About = () => {
     <div className="bg-gradient-to-br from-grad-red to-grad-orange flex flex-col items-center py-8 relative -z-20">
       <div className="-top-0 absolute w-full h-full bg-transparent-layer backdrop-blur-sm -z-10"></div>
 
-      <TransparentRect className="absolute -top-6 -left-4 w-64 h-16 rotate-45 -z-20 origin-left" />
+      <TransparentRect className="absolute -top-6 -left-4 w-64 h-16 rotate-45 -z-20 origin-left animate-wave1" />
 
       <img src={logo} alt="ochisa_logo" className="w-96" />
 
