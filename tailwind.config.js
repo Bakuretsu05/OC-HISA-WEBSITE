@@ -8,12 +8,18 @@ export default {
       body: ["Poppins"],
       monoton: ["Monoton"],
     },
+
     extend: {
       colors: {
         "grad-red": "#FF004D",
         "grad-orange": "#FFC700",
         "transparent-layer": "#ffffff33",
         "transparent-layer-bright": "#ffffff88",
+
+        "timeline-grad-stop-1": "#FF9345",
+        "timeline-grad-stop-2": "#7DEFFF",
+        "timeline-grad-stop-3": "#FF84D5",
+        "timeline-grad-stop-4": "#FF5151",
       },
       animation: {
         wave1: "wave1 10s linear infinite",
@@ -58,6 +64,7 @@ export default {
       spacing: {
         thin: "1px",
         "aboutpage-p-width": "40%",
+        "timeline-center-fix": "0.35rem",
       },
       boxShadow: {
         "card-shadow": "0.5rem 0.5rem 0 0 #33333333",
