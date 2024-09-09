@@ -15,6 +15,8 @@ export default {
         "grad-orange": "#FFC700",
         "transparent-layer": "#ffffff33",
         "transparent-layer-bright": "#ffffff88",
+        "kaorou-event-color": "#FDDE3F",
+        "yingxin-event-color": "#3FFDDB",
 
         "timeline-grad-stop-1": "#FF9345",
         "timeline-grad-stop-2": "#7DEFFF",
@@ -65,6 +67,10 @@ export default {
         thin: "1px",
         "aboutpage-p-width": "40%",
         "timeline-center-fix": "0.35rem",
+        "timeline-new-year-border": "41%",
+        30: "7.5rem",
+        "13%": "13%",
+        "30%": "30%",
       },
       boxShadow: {
         "card-shadow": "0.5rem 0.5rem 0 0 #33333333",
