@@ -1,5 +1,6 @@
 import TimePoint from "./TimePoint";
 import eventList from "../../utils/eventList";
+import { calculateTodayTimepointIndex } from "../../utils/utils";
 
 const TimelineBar = () => {
   return (
@@ -25,6 +26,7 @@ const TimelineBar = () => {
         isEvent={true}
         className="left-13%"
         eventColor="bg-kaorou-event-color"
+        eventDesc={eventList.kaorou.desc}
       />
       <TimePoint
         label={eventList.yingxin.title}
@@ -32,7 +34,21 @@ const TimelineBar = () => {
         isEvent={true}
         className="left-30%"
         eventColor="bg-yingxin-event-color"
+        eventDesc={eventList.yingxin.desc}
       />
+      <TimePoint
+        label={eventList.christmas.title}
+        isEvent={true}
+        className="left-42%"
+        eventColor="bg-christmas-event-color"
+        eventDesc={eventList.christmas.desc}
+      />
+      <TimePoint
+        label="Now"
+        className={"left-timeline-now-" + calculateTodayTimepointIndex()}
+        isNow={true}
+      />
+
       <span className="absolute left-timeline-new-year-border -top-30 h-60 w-thin bg-white flex flex-col justify-between">
         <p className="text-white translate-x-2">2025</p>
         <p className="text-white -translate-x-12">2024</p>
