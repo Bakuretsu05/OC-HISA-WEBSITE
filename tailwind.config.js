@@ -1,11 +1,9 @@
-import { transformWithEsbuild } from "vite";
-
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
-      body: ["Poppins"],
+      poppins: ["Poppins", "sans-serif"],
       monoton: ["Monoton"],
     },
 
@@ -114,6 +112,7 @@ export default {
       boxShadow: {
         "card-shadow": "0.5rem 0.5rem 0 0 #33333333",
       },
+    },
+    plugins: [],
   },
-  plugins: [],
 };
