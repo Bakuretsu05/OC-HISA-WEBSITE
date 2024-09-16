@@ -114,7 +114,6 @@ export default {
       boxShadow: {
         "card-shadow": "0.5rem 0.5rem 0 0 #33333333",
       },
-    },
   },
   plugins: [],
 };
