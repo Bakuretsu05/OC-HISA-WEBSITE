@@ -7,6 +7,7 @@ import Membership from "./pages/membership";
 import Partner from "./pages/partner";
 import NotFound from "./pages/notFound";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="partner" element={<Partner />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
