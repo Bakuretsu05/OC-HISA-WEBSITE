@@ -1,8 +1,16 @@
 import TimePoint from "./TimePoint";
 import eventList from "../../utils/eventList";
-import { calculateTodayTimepointIndex } from "../../utils/utils";
+import { nowTimepointClassnames } from "../../utils/utils";
+import TimelineInfoCard from "./TimelineInfoCard";
 
 const TimelineBar = () => {
+  const date = new Date();
+
+  //* Re-mapping month indices
+  let monthInd = date.getMonth();
+  monthInd >= 7 ? (monthInd -= 7) : (monthInd += 5);
+  monthInd = monthInd * 2 + (date.getDate() > 15 ? 1 : 0);
+
   return (
     <div className="flex w-2/3 my-56 relative">
       <div className="h-1 w-1/3 bg-gradient-to-r from-timeline-grad-stop-1 to-timeline-grad-stop-2 translate-y-timeline-center-fix"></div>
@@ -27,6 +35,7 @@ const TimelineBar = () => {
         className="left-13%"
         eventColor="bg-kaorou-event-color"
         eventDesc={eventList.kaorou.desc}
+        eventDate={eventList.kaorou.date}
       />
       <TimePoint
         label={eventList.yingxin.title}
@@ -35,18 +44,15 @@ const TimelineBar = () => {
         className="left-30%"
         eventColor="bg-yingxin-event-color"
         eventDesc={eventList.yingxin.desc}
+        eventDate={eventList.yingxin.date}
       />
       <TimePoint
         label={eventList.christmas.title}
         isEvent={true}
-        className="left-42%"
+        className="left-[42%]"
         eventColor="bg-christmas-event-color"
         eventDesc={eventList.christmas.desc}
-      />
-      <TimePoint
-        label="Now"
-        className={"left-timeline-now-" + calculateTodayTimepointIndex()}
-        isNow={true}
+        eventDate={eventList.christmas.date}
       />
 
       <span className="absolute left-timeline-new-year-border -top-30 h-60 w-thin bg-white flex flex-col justify-between">

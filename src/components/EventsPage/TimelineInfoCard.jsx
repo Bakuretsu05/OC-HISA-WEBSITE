@@ -1,10 +1,17 @@
 import { getTodaysDateString } from "../../utils/utils";
 
-const TimelineInfoCard = ({ img, title, desc, labelAtTop, showToday }) => {
+const TimelineInfoCard = ({
+  img,
+  title,
+  date,
+  desc,
+  labelAtTop,
+  showToday,
+}) => {
   const [dateString, yearString] = getTodaysDateString();
 
   return showToday ? (
-    <div className="w-52 bg-transparent-layer rounded-lg shadow-md z-30 absolute origin-bottom -bottom-0 p-4">
+    <div className="w-52 bg-transparent-layer rounded-lg shadow-md z-30 absolute origin-top-right right-6 top-6 p-4">
       <p className="text-white text-sm">Today</p>
       <h1 className="text-white text-3xl font-bold">{dateString}</h1>
       <h3 className="text-xl font-bold text-grad-orange">{yearString}</h3>
@@ -18,7 +25,8 @@ const TimelineInfoCard = ({ img, title, desc, labelAtTop, showToday }) => {
     >
       <div className="flex flex-col p-4 z-20 w-70% relative">
         <h1 className="font-bold">{title}</h1>
-        <p className="line-clamp-4">{desc}</p>
+        <p className="text-sm font-bold text-amber-500">{date}</p>
+        <p className="line-clamp-3 mt-2">{desc}</p>
       </div>
       <img src={img} alt={img} className="w-30%" />
     </div>

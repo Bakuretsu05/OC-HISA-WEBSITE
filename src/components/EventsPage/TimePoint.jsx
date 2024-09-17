@@ -8,51 +8,24 @@ const TimePoint = ({
   eventColor,
   eventImg,
   eventDesc,
-  isNow,
+  eventDate,
   className,
 }) => {
   const [hovered, setHovered] = useState(false);
+  const [showInfoCard, setShowInfoCard] = useState(false);
 
   let content;
 
-  if (isNow) {
+  if (isEvent) {
     content = (
-      <div
-        className={"absolute " + className}
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
-      >
-        {hovered && <TimelineInfoCard showToday={true} />}
-        <div
-          className={
-            "flex flex-col items-center relative transition-all duration-250 origin-top " +
-            (hovered ? " scale-125" : "")
-          }
-        >
-          <span
-            className={
-              "absolute  w-4 h-4 rounded-full flex flex-col transition-all duration-250 z-10 overflow-hidden"
-            }
-          >
-            <span className="h-1/2 w-full bg-grad-red" />
-            <span className="h-1/2 w-full bg-white" />
-          </span>
-        </div>
-      </div>
-    );
-  } else if (isEvent) {
-    content = (
-      <div
-        className={"absolute " + className}
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
-      >
-        {hovered && (
+      <div className={"absolute " + className}>
+        {(hovered || showInfoCard) && (
           <TimelineInfoCard
             img={eventImg}
             title={label}
             desc={eventDesc}
             labelAtTop={labelAtTop}
+            date={eventDate}
           />
         )}
         <div
@@ -60,6 +33,14 @@ const TimePoint = ({
             "flex flex-col items-center relative transition-all duration-250 " +
             (labelAtTop ? "-translate-y-24 origin-bottom" : "origin-top") +
             (hovered ? " scale-125" : "")
+          }
+          onMouseEnter={() => setHovered(true)}
+          onMouseLeave={() => setHovered(false)}
+          onMouseDown={() =>
+            setShowInfoCard((prevState) => {
+              if (prevState) setHovered(false);
+              return !prevState;
+            })
           }
         >
           {!labelAtTop ? (
