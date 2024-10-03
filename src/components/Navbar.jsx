@@ -4,9 +4,10 @@ import SearchBar from "./SearchBar";
 import SocialMediaLink from "./SocialMediaLink";
 import paths from "../utils/path.js";
 
+// eslint-disable-next-line react/prop-types
 const Navbar = ({ children }) => {
   return (
-    <nav>
+    <nav className="">
       <div className="flex items-center justify-around bg-[#F13148]">
         <Link to="/">
           <img src={logo} alt="Nav Logo" className="w-64" />
@@ -25,7 +26,7 @@ const Navbar = ({ children }) => {
         </ul>
       </div>
 
-      <div className="sticky bg-white top-0 z-20">
+      <div className="sticky bg-white top-0 z-20 shadow-md">
         <ul className="flex text-black font-bold justify-center">
           {paths.map(({ name, path }) => (
             <NavLink

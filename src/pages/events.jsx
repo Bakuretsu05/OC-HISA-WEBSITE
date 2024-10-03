@@ -4,7 +4,7 @@ import yingxinSlide1 from "../assets/images/yingxin_slide1.png";
 import christmasSlide1 from "../assets/images/christmas_slide1.png";
 import Card from "../components/Card";
 import eventList from "../utils/eventList";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-roter-dom";
 
 const Events = () => {
   return (

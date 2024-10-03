@@ -10,6 +10,7 @@ export default {
 
     extend: {
       colors: {
+        "signature-red": "#F6344B",
         "grad-red": "#FF004D",
         "grad-red2": "#FF3E6D",
         "grad-orange": "#FFC700",
@@ -24,11 +25,6 @@ export default {
         "timeline-grad-stop-2": "#7DEFFF",
         "timeline-grad-stop-3": "#FF84D5",
         "timeline-grad-stop-4": "#FF5151",
-      },
-      animation: {
-        wave1: "wave1 10s linear infinite",
-        wave2: "wave2 15s linear infinite",
-        wave3: "wave3 15s linear infinite",
       },
       keyframes: {
         wave1: {
@@ -64,6 +60,18 @@ export default {
             transform: "rotate(-15deg)",
           },
         },
+        bobbing: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-65px)" }, // Increased to 40px for the larger circles
+        },
+      },
+      animation: {
+        wave1: "wave1 10s linear infinite",
+        wave2: "wave2 15s linear infinite",
+        wave3: "wave3 15s linear infinite",
+        "bobbing-slow": "bobbing 6s ease-in-out infinite",
+        "bobbing-medium": "bobbing 4s ease-in-out infinite",
+        "bobbing-fast": "bobbing 2.5s ease-in-out infinite",
       },
       spacing: {
         thin: "1px",
