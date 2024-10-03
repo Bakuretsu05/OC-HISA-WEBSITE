@@ -5,12 +5,15 @@ export default {
     fontFamily: {
       poppins: ["Poppins", "sans-serif"],
       monoton: ["Monoton"],
+      chinese: ["Noto Sans TC"],
     },
 
     extend: {
       colors: {
         "grad-red": "#FF004D",
+        "grad-red2": "#FF3E6D",
         "grad-orange": "#FFC700",
+        "grad-orange2": "#FFCA36",
         "transparent-layer": "#ffffff33",
         "transparent-layer-bright": "#ffffff88",
         "kaorou-event-color": "#FDDE3F",
@@ -82,7 +85,7 @@ export default {
          ** 86.95652174  91.30434783  95.65217391 100.        ]
          */
 
-        "timeline-now-0": "0%",
+        "timeline-now-0": "2%",
         "timeline-now-1": "4.3%",
         "timeline-now-2": "8.7%",
         "timeline-now-3": "13.0%",

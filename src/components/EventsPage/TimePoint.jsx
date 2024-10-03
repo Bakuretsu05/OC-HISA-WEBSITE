@@ -17,12 +17,7 @@ const TimePoint = ({
 
   if (isNow) {
     content = (
-      <div
-        className={"absolute " + className}
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
-      >
-        {hovered && <TimelineInfoCard showToday={true} />}
+      <div className={"absolute " + className}>
         <div
           className={
             "flex flex-col items-center relative transition-all duration-250 origin-top " +
@@ -45,7 +40,6 @@ const TimePoint = ({
       <div
         className={"absolute " + className}
         onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
       >
         {hovered && (
           <TimelineInfoCard
@@ -53,6 +47,7 @@ const TimePoint = ({
             title={label}
             desc={eventDesc}
             labelAtTop={labelAtTop}
+            onClose={() => setHovered(false)}
           />
         )}
         <div

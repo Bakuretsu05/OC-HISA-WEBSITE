@@ -4,17 +4,17 @@ import SearchBar from "./SearchBar";
 import SocialMediaLink from "./SocialMediaLink";
 import paths from "../utils/path.js";
 
-const Navbar = () => {
+const Navbar = ({ children }) => {
   return (
-    <nav className="bg-[#F13148] h-[215px]">
-      <div className="flex items-center justify-between">
+    <nav>
+      <div className="flex items-center justify-around bg-[#F13148]">
         <Link to="/">
-          <img src={logo} alt="Nav Logo" className="min-w-52" />
+          <img src={logo} alt="Nav Logo" className="w-64" />
         </Link>
 
         <SearchBar />
 
-        <ul className="flex items-center gap-8 text-white text-5xl p-8">
+        <ul className="flex items-center gap-8 text-white text-3xl p-8">
           <SocialMediaLink
             link="https://www.instagram.com/oc_hisa/"
             isList={true}
@@ -25,22 +25,25 @@ const Navbar = () => {
         </ul>
       </div>
 
-      <div>
-        <ul className="flex text-white text-2xl font-bold gap-20 justify-center">
+      <div className="sticky bg-white top-0 z-20">
+        <ul className="flex text-black font-bold justify-center">
           {paths.map(({ name, path }) => (
-            <li key={name}>
-              <NavLink
-                to={path}
-                className={({ isActive }) =>
-                  isActive ? "text-decoration-line: underline" : ""
-                }
-              >
+            <NavLink
+              to={path}
+              key={name}
+              className={({ isActive }) =>
+                isActive ? "bg-[#F13148] text-white " : ""
+              }
+            >
+              <li className="px-8 py-4  hover:text-white hover:bg-[#F13148] transition-all duration-200">
                 {name}
-              </NavLink>
-            </li>
+              </li>
+            </NavLink>
           ))}
         </ul>
       </div>
+
+      {children}
     </nav>
   );
 };
