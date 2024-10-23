@@ -62,7 +62,11 @@ export default {
         },
         bobbing: {
           "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-65px)" }, // Increased to 40px for the larger circles
+          "50%": { transform: "translateY(-75px)" }, // Increased to 40px for the larger circles
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-40px)" },
         },
       },
       animation: {
@@ -72,6 +76,8 @@ export default {
         "bobbing-slow": "bobbing 6s ease-in-out infinite",
         "bobbing-medium": "bobbing 4s ease-in-out infinite",
         "bobbing-fast": "bobbing 2.5s ease-in-out infinite",
+        "float-slow": "float 5s ease-in-out infinite",
+        "float-medium": "float 8s ease-in-out infinite",
       },
       spacing: {
         thin: "1px",
