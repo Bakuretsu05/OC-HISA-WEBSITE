@@ -3,7 +3,7 @@
 import { IoSearchCircleOutline } from "react-icons/io5";
 import { useState } from "react";
 
-const SearchBar = () => {
+const SearchBar = (props) => {
   const [input, setInput] = useState("");
 
   const submitForm = (e) => {
@@ -12,10 +12,11 @@ const SearchBar = () => {
   };
 
   return (
-    <>
+    <div className={"w-full " + props.className}>
       <form
         onSubmit={submitForm}
-        className="flex relative h-12 w-[50%] bg-gray-100 rounded-full bg-opacity-35 items-center"
+        // eslint-disable-next-line react/prop-types
+        className={`flex relative h-12 w-[80%] mx-auto bg-gray-100 rounded-full bg-opacity-35 items-center`}
       >
         <button type="submit" className="ml-3">
           <IoSearchCircleOutline
@@ -32,7 +33,7 @@ const SearchBar = () => {
           className="ml-4 text-2xl bg-transparent text-white outline-none hover:outline-none focus:outline-none"
         />
       </form>
-    </>
+    </div>
   );
 };
 
