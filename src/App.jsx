@@ -12,15 +12,16 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route index element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="events" element={<Events />} />
-        <Route path="membership" element={<Membership />} />
-        <Route path="partner" element={<Partner />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <Navbar>
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="events" element={<Events />} />
+          <Route path="membership" element={<Membership />} />
+          <Route path="partner" element={<Partner />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Navbar>
       <Footer />
     </BrowserRouter>
   );

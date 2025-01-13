@@ -18,14 +18,17 @@ const TimePoint = ({
 
   if (isEvent) {
     content = (
-      <div className={"absolute " + className}>
-        {(hovered || showInfoCard) && (
+      <div
+        className={"absolute " + className}
+        onMouseEnter={() => setHovered(true)}
+      >
+        {hovered && (
           <TimelineInfoCard
             img={eventImg}
             title={label}
             desc={eventDesc}
             labelAtTop={labelAtTop}
-            date={eventDate}
+            onClose={() => setHovered(false)}
           />
         )}
         <div

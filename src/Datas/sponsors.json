@@ -1,0 +1,30 @@
+[
+  {
+    "id": "sponsor_missgame_silver_1",
+    "name": "Miss Game",
+    "grade": "silver",
+    "description": "",
+    "logoUrl": "/sponsors/MissGame.png"
+  },
+  {
+    "id": "sponsor_eecglobaltk_silver_2",
+    "name": "EEC Global TK",
+    "grade": "silver",
+    "description": "",
+    "logoUrl": "/sponsors/eecGlobalTK.png"
+  },
+  {
+    "id": "sponsor_indomie_bronze_3",
+    "name": "Indomie",
+    "grade": "bronze",
+    "description": "",
+    "logoUrl": "/sponsors/Indomie.png"
+  },
+  {
+    "id": "sponsor_greenduck_bronze_4",
+    "name": "GreenDuck",
+    "grade": "bronze",
+    "description": "",
+    "logoUrl": "/sponsors/GreenDuck.png"
+  }
+]

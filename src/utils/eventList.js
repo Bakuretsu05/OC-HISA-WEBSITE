@@ -14,9 +14,19 @@ const eventList = {
     date: "Dec 25, 2024",
     desc: "Celebrate Christmas together with OC HISA. Enjoy live music holiday and carols, spectacular light displays and decorations, free flowing festive snacks and drinks, and engage in fun exciting activities.",
   },
+  intday_nycu: {
+    title: "International Day (NYCU)",
+    date: "Feb 22, 2025",
+    desc: "Join us at our booth during International Day to explore the vibrant culture of Indonesia! From traditional clothing and delicious cuisine to our unique language and rich traditions, we’re here to share the beauty of our heritage."
+  },
+  intday_nthu: {
+    title: "International Day (NTHU)",
+    date: "Mid April, 2025 [TBA]",
+    desc: "Join us at our booth during International Day to explore the vibrant culture of Indonesia! From traditional clothing and delicious cuisine to our unique language and rich traditions, we’re here to share the beauty of our heritage."
+  },
   songjiu: {
     title: "Graduation Party",
-    date: "To be announced",
+    date: "Early May, 2025 [TBA]",
     desc: "A special night filled with wonderful performances and unforgettable events. This party is mainly to make a special memory for the students who are going to graduate soon. Enjoy delicious dinner with friends, watch or participate in the performances, and create special memories with friends who are about to leave and embark on a new journey.",
   },
 };

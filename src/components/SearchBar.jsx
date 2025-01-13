@@ -15,11 +15,11 @@ const SearchBar = () => {
     <>
       <form
         onSubmit={submitForm}
-        className="flex relative h-[64px] w-6/12 bg-gray-100 rounded-full bg-opacity-35"
+        className="flex relative h-12 w-[50%] bg-gray-100 rounded-full bg-opacity-35 items-center"
       >
-        <button type="submit" className="absolute top-2 left-2">
+        <button type="submit" className="ml-3">
           <IoSearchCircleOutline
-            className="text-gray-200 text-5xl"
+            className="text-transparent-layer-bright text-3xl"
             type="submit"
           />
         </button>
@@ -29,7 +29,7 @@ const SearchBar = () => {
           name="textInput"
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          className="indent-16 text-2xl bg-transparent text-white outline-none hover:outline-none focus:outline-none"
+          className="ml-4 text-2xl bg-transparent text-white outline-none hover:outline-none focus:outline-none"
         />
       </form>
     </>

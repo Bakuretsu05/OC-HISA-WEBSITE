@@ -21,4 +21,11 @@ const pathLists = [
   },
 ];
 
+export const socialLinks = {
+  email: "ochisa84@gmail.com",
+  instagram: "https://www.instagram.com/oc_hisa/",
+  facebook: "",
+  youtube: "",
+};
+
 export default pathLists;

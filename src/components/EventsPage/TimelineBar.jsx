@@ -1,7 +1,9 @@
 import TimePoint from "./TimePoint";
 import eventList from "../../utils/eventList";
-import { nowTimepointClassnames } from "../../utils/utils";
-import TimelineInfoCard from "./TimelineInfoCard";
+import { calculateTodayTimepointIndex } from "../../utils/utils";
+import kaorouPhoto from "../../assets/images/kaorou.png";
+import yingxinPhoto from "../../assets/images/yingxin.png";
+import christmasPhoto from "../../assets/images/christmas.png";
 
 const TimelineBar = () => {
   const date = new Date();
@@ -35,7 +37,7 @@ const TimelineBar = () => {
         className="left-13%"
         eventColor="bg-kaorou-event-color"
         eventDesc={eventList.kaorou.desc}
-        eventDate={eventList.kaorou.date}
+        eventImg={kaorouPhoto}
       />
       <TimePoint
         label={eventList.yingxin.title}
@@ -44,16 +46,40 @@ const TimelineBar = () => {
         className="left-30%"
         eventColor="bg-yingxin-event-color"
         eventDesc={eventList.yingxin.desc}
-        eventDate={eventList.yingxin.date}
+        eventImg={yingxinPhoto}
       />
       <TimePoint
         label={eventList.christmas.title}
         isEvent={true}
-        className="left-[42%]"
+        labelAtTop={true}
+        className="left-[38%]"
         eventColor="bg-christmas-event-color"
         eventDesc={eventList.christmas.desc}
-        eventDate={eventList.christmas.date}
+        eventImg={christmasPhoto}
       />
+      <TimePoint
+        label={eventList.intday_nycu.title}
+        isEvent={true}
+        className="left-[58%]"
+        eventColor="bg-intday_nycu-event-color"
+        eventDesc={eventList.intday_nycu.desc}
+      />
+      <TimePoint
+        label={eventList.intday_nthu.title}
+        isEvent={true}
+        labelAtTop={true}
+        className="left-[76%]"
+        eventColor="bg-intday_nthu-event-color"
+        eventDesc={eventList.intday_nthu.desc}
+      />
+      <TimePoint
+        label={eventList.songjiu.title}
+        isEvent={true}
+        className="left-[83%]"
+        eventColor="bg-songjiu-event-color"
+        eventDesc={eventList.songjiu.desc}
+      />
+      
 
       <span className="absolute left-timeline-new-year-border -top-30 h-60 w-thin bg-white flex flex-col justify-between">
         <p className="text-white translate-x-2">2025</p>
