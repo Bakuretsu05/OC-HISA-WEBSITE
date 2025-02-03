@@ -13,7 +13,7 @@ const TimelineInfoCard = ({
   const [dateString, yearString] = getTodaysDateString();
 
   return showToday ? (
-    <div className="w-52 bg-transparent-layer rounded-lg shadow-md z-30 absolute origin right top-4 right-4 p-4">
+    <div className="w-52 bg-transparent-layer rounded-lg shadow-md z-10 absolute origin right top-4 right-4 p-4">
       <p className="text-white text-sm">Today</p>
       <h1 className="text-white text-3xl font-bold">{dateString}</h1>
       <h3 className="text-xl font-bold text-grad-orange">{yearString}</h3>

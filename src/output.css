@@ -649,10 +649,6 @@ body{
   bottom: -10%;
 }
 
-.bottom-\[-12\%\]{
-  bottom: -12%;
-}
-
 .bottom-\[-20\%\]{
   bottom: -20%;
 }
@@ -701,10 +697,6 @@ body{
   left: -25%;
 }
 
-.left-\[-7\%\]{
-  left: -7%;
-}
-
 .left-\[-70\%\]{
   left: -70%;
 }
@@ -731,10 +723,6 @@ body{
 
 .left-\[26\.5\%\]{
   left: 26.5%;
-}
-
-.left-\[28\%\]{
-  left: 28%;
 }
 
 .left-\[30\%\]{
@@ -1092,16 +1080,20 @@ body{
   height: 600px;
 }
 
+.h-\[75vh\]{
+  height: 75vh;
+}
+
+.h-\[90vh\]{
+  height: 90vh;
+}
+
 .h-auto{
   height: auto;
 }
 
 .h-full{
   height: 100%;
-}
-
-.h-lvh{
-  height: 100lvh;
 }
 
 .h-screen{
@@ -1216,14 +1208,6 @@ body{
   width: 100%;
 }
 
-.w-lvw{
-  width: 100lvw;
-}
-
-.w-screen{
-  width: 100vw;
-}
-
 .w-thin{
   width: 1px;
 }
@@ -1287,9 +1271,21 @@ body{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.scale-110{
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .scale-125{
   --tw-scale-x: 1.25;
   --tw-scale-y: 1.25;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.scale-75{
+  --tw-scale-x: .75;
+  --tw-scale-y: .75;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1433,6 +1429,10 @@ body{
   align-items: center;
 }
 
+.justify-end{
+  justify-content: flex-end;
+}
+
 .justify-center{
   justify-content: center;
 }
@@ -1459,10 +1459,6 @@ body{
 
 .overflow-x-hidden{
   overflow-x: hidden;
-}
-
-.overflow-x-clip{
-  overflow-x: clip;
 }
 
 .rounded-2xl{
@@ -1505,11 +1501,6 @@ body{
   background-color: rgb(63 230 253 / var(--tw-bg-opacity));
 }
 
-.bg-cyan-300{
-  --tw-bg-opacity: 1;
-  background-color: rgb(103 232 249 / var(--tw-bg-opacity));
-}
-
 .bg-gray-100{
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
@@ -1520,14 +1511,14 @@ body{
   background-color: rgb(156 163 175 / var(--tw-bg-opacity));
 }
 
-.bg-gray-800{
+.bg-intday_nthu-event-color{
   --tw-bg-opacity: 1;
-  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+  background-color: rgb(237 145 218 / var(--tw-bg-opacity));
 }
 
-.bg-gray-900{
+.bg-intday_nycu-event-color{
   --tw-bg-opacity: 1;
-  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+  background-color: rgb(203 174 229 / var(--tw-bg-opacity));
 }
 
 .bg-kaorou-event-color{
@@ -1555,6 +1546,11 @@ body{
   background-color: rgb(51 65 85 / var(--tw-bg-opacity));
 }
 
+.bg-songjiu-event-color{
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 111 160 / var(--tw-bg-opacity));
+}
+
 .bg-transparent{
   background-color: transparent;
 }
@@ -1575,21 +1571,6 @@ body{
 .bg-yingxin-event-color{
   --tw-bg-opacity: 1;
   background-color: rgb(63 253 219 / var(--tw-bg-opacity));
-}
-
-.bg-intday_nycu-event-color{
-  --tw-bg-opacity: 1;
-  background-color: rgb(203 174 229 / var(--tw-bg-opacity));
-}
-
-.bg-intday_nthu-event-color{
-  --tw-bg-opacity: 1;
-  background-color: rgb(237 145 218 / var(--tw-bg-opacity));
-}
-
-.bg-songjiu-event-color{
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 111 160 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-35{
@@ -1690,12 +1671,12 @@ body{
   padding: 4rem;
 }
 
-.p-20{
-  padding: 5rem;
-}
-
 .p-4{
   padding: 1rem;
+}
+
+.p-5{
+  padding: 1.25rem;
 }
 
 .p-6{
@@ -1773,9 +1754,9 @@ body{
   line-height: 1;
 }
 
-.text-8xl{
-  font-size: 6rem;
-  line-height: 1;
+.text-lg{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .text-sm{
@@ -1817,11 +1798,6 @@ body{
 .text-black{
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
-.text-blue-300{
-  --tw-text-opacity: 1;
-  color: rgb(147 197 253 / var(--tw-text-opacity));
 }
 
 .text-grad-orange{

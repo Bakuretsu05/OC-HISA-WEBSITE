@@ -10,7 +10,7 @@ const Events = () => {
   return (
     <div className="relative flex flex-col">
       <EventsTimeline />
-      <section className="relative w-lvw h-lvh flex items-center justify-center">
+      <section className="relative  h-[90vh] flex items-center justify-center">
         <img
           src={kaorouSlide1}
           alt="kaorouslide"
@@ -24,7 +24,7 @@ const Events = () => {
           <div className="h-thin w-full bg-gray-400 my-4"></div>
           <p className="text-center">{eventList.kaorou.desc}</p>
           <a
-            href="https://linktr.ee/oc_hisa"
+            href="https://bio.site/ochisa"
             className="text-sm underline text-amber-600 mt-4"
             target="_blank"
           >
@@ -32,7 +32,7 @@ const Events = () => {
           </a>
         </Card>
       </section>
-      <section className="relative w-lvw h-lvh flex items-center justify-center">
+      <section className="relative h-[90vh] flex items-center justify-center">
         <img
           src={yingxinSlide1}
           alt="yingxinslide1"
@@ -46,7 +46,7 @@ const Events = () => {
           <div className="h-thin w-full bg-gray-400 my-4"></div>
           <p className="text-center">{eventList.yingxin.desc}</p>
           <a
-            href="https://linktr.ee/oc_hisa"
+            href="https://bio.site/ochisa"
             className="text-sm underline text-amber-600 mt-4"
             target="_blank"
           >
@@ -54,7 +54,7 @@ const Events = () => {
           </a>
         </Card>
       </section>
-      <section className="relative w-lvw h-lvh flex items-center justify-center">
+      <section className="relative h-[90vh] flex items-center justify-center">
         <img
           src={christmasSlide1}
           alt="christmasSlide1"
@@ -65,7 +65,7 @@ const Events = () => {
           <div className="h-thin w-full bg-gray-400 my-4"></div>
           <p className="text-center">{eventList.christmas.desc}</p>
           <a
-            href="https://linktr.ee/oc_hisa"
+            href="https://bio.site/ochisa"
             className="text-sm underline text-amber-600 mt-4"
             target="_blank"
           >

@@ -4,7 +4,7 @@ import StudentEssentialsSection from "../components/HomePage/StudentEssentialsSe
 
 const Home = () => {
   return (
-    <div className="w-screen overflow-x-clip">
+    <div>
       <MainTitle />
       <AboutSection />
       <StudentEssentialsSection />
