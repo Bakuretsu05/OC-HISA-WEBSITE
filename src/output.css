@@ -1216,6 +1216,14 @@ body{
   width: 30rem;
 }
 
+.w-48{
+  width: 12rem;
+}
+
+.w-\[40rem\]{
+  width: 40rem;
+}
+
 .max-w-4xl{
   max-width: 56rem;
 }

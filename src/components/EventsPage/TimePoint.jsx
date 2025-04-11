@@ -2,7 +2,8 @@ import { useState } from "react";
 import TimelineInfoCard from "./TimelineInfoCard";
 
 const TimePoint = ({
-  label,
+  title,
+  chineseTitle,
   labelAtTop,
   isEvent,
   eventColor,
@@ -25,7 +26,7 @@ const TimePoint = ({
         {hovered && (
           <TimelineInfoCard
             img={eventImg}
-            title={label}
+            title={title}
             desc={eventDesc}
             labelAtTop={labelAtTop}
             onClose={() => setHovered(false)}
@@ -61,7 +62,7 @@ const TimePoint = ({
               ></span>
               <span className={"w-thin h-24 " + eventColor}></span>
               <p className="font-semibold text-white absolute -bottom-14">
-                {label}
+                {title + (chineseTitle ? ` (${chineseTitle})` : "")}
               </p>
             </>
           ) : (
@@ -72,7 +73,7 @@ const TimePoint = ({
                 }
               ></span>
               <p className="font-semibold text-white absolute -top-16">
-                {label}
+                {title + (chineseTitle ? ` (${chineseTitle})` : "")}
               </p>
               <span className={"w-thin h-24 " + eventColor}></span>
               <span
@@ -102,7 +103,7 @@ const TimePoint = ({
             "text-white absolute -left-2 " + (labelAtTop ? "-top-8" : "top-6")
           }
         >
-          {label}
+          {title}
         </p>
       </div>
     );

@@ -41,7 +41,11 @@ const TimelineInfoCard = ({
         <p className="text-sm font-bold text-amber-500">{date}</p>
         <p className="line-clamp-3 mt-2">{desc}</p>
       </div>
-      <img src={img} alt="there should be a picture here (prob. hasn't found the pic yet...)" className="w-30% object-cover" />
+      <img
+        src={img}
+        alt="there should be a picture here (prob. hasn't found the pic yet...)"
+        className="w-30% object-cover"
+      />
     </div>
   );
 };
