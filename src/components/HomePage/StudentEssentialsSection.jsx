@@ -8,9 +8,9 @@ const StudentEssentialsSection = () => {
         <img
           src={ganbuPicture}
           alt="Students"
-          className="absolute inset-0 h-full left-[-7%]"
+          className="absolute h-full scale-110 z-0"
         />
-        <div className="absolute inset-0 bg-cyan-300 opacity-30"></div>
+        <div className="absolute inset-0 bg-white opacity-30"></div>
       </div>
 
       {/* Right-side text content */}

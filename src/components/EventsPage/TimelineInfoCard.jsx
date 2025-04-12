@@ -4,6 +4,7 @@ import { FaRegWindowClose } from "react-icons/fa";
 const TimelineInfoCard = ({
   img,
   title,
+  date,
   desc,
   labelAtTop,
   showToday,
@@ -12,7 +13,7 @@ const TimelineInfoCard = ({
   const [dateString, yearString] = getTodaysDateString();
 
   return showToday ? (
-    <div className="w-52 bg-transparent-layer rounded-lg shadow-md z-30 absolute origin right top-4 right-4 p-4">
+    <div className="w-52 bg-transparent-layer rounded-lg shadow-md z-10 absolute origin right top-4 right-4 p-4">
       <p className="text-white text-sm">Today</p>
       <h1 className="text-white text-3xl font-bold">{dateString}</h1>
       <h3 className="text-xl font-bold text-grad-orange">{yearString}</h3>
@@ -37,9 +38,14 @@ const TimelineInfoCard = ({
 
       <div className="flex flex-col p-4 z-20 w-70% relative">
         <h1 className="font-bold">{title}</h1>
-        <p className="line-clamp-4">{desc}</p>
+        <p className="text-sm font-bold text-amber-500">{date}</p>
+        <p className="line-clamp-3 mt-2">{desc}</p>
       </div>
-      <img src={img} alt="helo?" className="w-30% object-cover" />
+      <img
+        src={img}
+        alt="there should be a picture here (prob. hasn't found the pic yet...)"
+        className="w-30% object-cover"
+      />
     </div>
   );
 };

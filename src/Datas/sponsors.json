@@ -26,5 +26,12 @@
     "grade": "bronze",
     "description": "",
     "logoUrl": "/sponsors/GreenDuck.png"
+  },
+  {
+    "id": "sponsor_intw",
+    "name": "INTW",
+    "grade": "bronze",
+    "description": "",
+    "logoUrl": "/sponsors/intw_logo.png"
   }
 ]

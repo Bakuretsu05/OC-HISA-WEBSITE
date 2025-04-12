@@ -3,8 +3,8 @@ import HomeLogo from "../../assets/images/home_logo.png";
 
 const MainTitle = () => {
   return (
-    <div className="relative bg-signature-red h-screen flex items-center justify-center animate-bobbing-slow">
-      <img src={HomeLogo} className="relative top-[-5%]" />
+    <div className="relative bg-signature-red h-screen flex items-center justify-center">
+      <img src={HomeLogo} className="relative top-[-5%] z-10" />
       <BobbingCircles />
     </div>
   );

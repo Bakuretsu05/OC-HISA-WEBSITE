@@ -2,40 +2,22 @@ import { useState } from "react";
 import TimelineInfoCard from "./TimelineInfoCard";
 
 const TimePoint = ({
-  label,
+  title,
+  chineseTitle,
   labelAtTop,
   isEvent,
   eventColor,
   eventImg,
   eventDesc,
-  isNow,
+  eventDate,
   className,
 }) => {
   const [hovered, setHovered] = useState(false);
+  const [showInfoCard, setShowInfoCard] = useState(false);
 
   let content;
 
-  if (isNow) {
-    content = (
-      <div className={"absolute " + className}>
-        <div
-          className={
-            "flex flex-col items-center relative transition-all duration-250 origin-top " +
-            (hovered ? " scale-125" : "")
-          }
-        >
-          <span
-            className={
-              "absolute  w-4 h-4 rounded-full flex flex-col transition-all duration-250 z-10 overflow-hidden"
-            }
-          >
-            <span className="h-1/2 w-full bg-grad-red" />
-            <span className="h-1/2 w-full bg-white" />
-          </span>
-        </div>
-      </div>
-    );
-  } else if (isEvent) {
+  if (isEvent) {
     content = (
       <div
         className={"absolute " + className}
@@ -44,7 +26,7 @@ const TimePoint = ({
         {hovered && (
           <TimelineInfoCard
             img={eventImg}
-            title={label}
+            title={title}
             desc={eventDesc}
             labelAtTop={labelAtTop}
             onClose={() => setHovered(false)}
@@ -55,6 +37,14 @@ const TimePoint = ({
             "flex flex-col items-center relative transition-all duration-250 " +
             (labelAtTop ? "-translate-y-24 origin-bottom" : "origin-top") +
             (hovered ? " scale-125" : "")
+          }
+          onMouseEnter={() => setHovered(true)}
+          onMouseLeave={() => setHovered(false)}
+          onMouseDown={() =>
+            setShowInfoCard((prevState) => {
+              if (prevState) setHovered(false);
+              return !prevState;
+            })
           }
         >
           {!labelAtTop ? (
@@ -72,7 +62,7 @@ const TimePoint = ({
               ></span>
               <span className={"w-thin h-24 " + eventColor}></span>
               <p className="font-semibold text-white absolute -bottom-14">
-                {label}
+                {title + (chineseTitle ? ` (${chineseTitle})` : "")}
               </p>
             </>
           ) : (
@@ -83,7 +73,7 @@ const TimePoint = ({
                 }
               ></span>
               <p className="font-semibold text-white absolute -top-16">
-                {label}
+                {title + (chineseTitle ? ` (${chineseTitle})` : "")}
               </p>
               <span className={"w-thin h-24 " + eventColor}></span>
               <span
@@ -113,7 +103,7 @@ const TimePoint = ({
             "text-white absolute -left-2 " + (labelAtTop ? "-top-8" : "top-6")
           }
         >
-          {label}
+          {title}
         </p>
       </div>
     );

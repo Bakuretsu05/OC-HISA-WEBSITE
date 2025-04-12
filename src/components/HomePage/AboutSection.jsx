@@ -24,7 +24,7 @@ const AboutSection = () => {
           </p>
           <Link
             to="/about"
-            className="text-red-500 text-2xl font-semibold hover:underline"
+            className="text-red-500 text-xl font-semibold hover:underline"
           >
             More about us
           </Link>
