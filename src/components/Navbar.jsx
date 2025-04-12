@@ -16,7 +16,7 @@ const Navbar = ({ children }) => {
   };
 
   return (
-    <nav className="sticky top-0">
+    <nav>
       <div className="z-50 p-1 px-3 flex items-center justify-between sm:justify-around bg-signature-red">
         <Link to="/">
           <img src={logo} alt="Nav Logo" className="w-52" />
