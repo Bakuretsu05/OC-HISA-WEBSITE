@@ -1,21 +1,35 @@
+import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/images/nav_logo.png";
 import SearchBar from "./SearchBar";
 import SocialMediaLink from "./SocialMediaLink";
 import paths from "../utils/path.js";
+import { FaBars } from "react-icons/fa";
+import { IoMdClose } from "react-icons/io";
 
 // eslint-disable-next-line react/prop-types
 const Navbar = ({ children }) => {
+  const [isNavShowing, setIsNavShowing] = useState(false);
+
+  const toggleNav = () => {
+    setIsNavShowing((prevIsNavShowing) => !prevIsNavShowing);
+  };
+
   return (
-    <nav className="">
-      <div className="flex items-center justify-around bg-[#F13148]">
+    <nav className="sticky top-0">
+      <div className="z-50 p-1 px-3 flex items-center justify-between sm:justify-around bg-signature-red">
         <Link to="/">
-          <img src={logo} alt="Nav Logo" className="w-64" />
+          <img src={logo} alt="Nav Logo" className="w-52" />
         </Link>
 
-        <SearchBar />
+        {/* nav toggle button */}
+        <button className="sm:hidden text-white text-3xl" onClick={toggleNav}>
+          {isNavShowing ? <IoMdClose /> : <FaBars />}
+        </button>
 
-        <ul className="flex items-center gap-8 text-white text-3xl p-8">
+        <SearchBar className="hidden sm:block" />
+
+        <ul className="hidden sm:flex items-center gap-8 text-white text-3xl p-8">
           <SocialMediaLink
             link="https://www.instagram.com/oc_hisa/"
             isList={true}
@@ -26,8 +40,15 @@ const Navbar = ({ children }) => {
         </ul>
       </div>
 
-      <div className="sticky bg-white top-0 z-20 shadow-md">
-        <ul className="flex text-black font-bold justify-center">
+      <div
+        className={`${
+          isNavShowing ? "block" : "hidden"
+        } sticky sm:block bg-white top-0 z-20 shadow-md`}
+      >
+        <ul
+          className="flex bg-white sm:static flex-col sm:flex-row text-black font-bold justify-center"
+          onClick={toggleNav}
+        >
           {paths.map(({ name, path }) => (
             <NavLink
               to={path}
